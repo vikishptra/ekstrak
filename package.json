@@ -1,0 +1,37 @@
+{
+  "name": "telegram-scrape",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "axios": "^1.7.8",
+    "bson": "^6.10.1",
+    "cli-progress": "^3.12.0",
+    "cron": "^3.2.1",
+    "decompress": "^4.2.1",
+    "fs": "^0.0.1-security",
+    "glob": "^11.0.0",
+    "mongodb": "^6.11.0",
+    "multi-progress": "^4.0.0",
+    "prebuilt-tdlib": "^0.1008039.0",
+    "progress": "^2.0.3",
+    "string-width": "^7.2.0",
+    "tdl": "^8.0.1",
+    "terminal-kit": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/multi-progress": "^2.0.6",
+    "@types/node": "^22.9.0",
+    "@types/terminal-kit": "^2.5.6",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}
