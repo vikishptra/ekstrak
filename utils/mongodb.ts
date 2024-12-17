@@ -15,7 +15,7 @@ class MongoDB {
   }
 
   public async connect(collection: string) {
-    const mongo = new MongoClient("mongodb://localhost:27017/", {})
+    const mongo = new MongoClient("mongodb://admin:wutdehelomaygat5758@192.168.200.23:27017/", {})
     this.mongoInstance = await mongo.connect()
     this.collection = this.mongoInstance.db("sector").collection(collection)
   }
