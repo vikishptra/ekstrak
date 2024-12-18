@@ -206,7 +206,6 @@ class Parser {
     const removedMimeType = filename.replace(/\.[a-z]{3,4}$/, "")
     const extractedFolder =  `${process.cwd()}/_td_files/documents/extracted/${removedMimeType}`
     const filteredFolder =  `${process.cwd()}/_td_files/documents/filtered/${removedMimeType}`
-    const uploadFolder =  `${process.cwd()}/result/${removedMimeType}.json`
     const file =  `${process.cwd()}/_td_files/documents/${filename}`
     if(fs.existsSync(file)){
       fs.rmSync(file, {recursive: true})
@@ -216,9 +215,6 @@ class Parser {
     }
     if(fs.existsSync(filteredFolder)){
       fs.rmSync(filteredFolder, {recursive: true})
-    }
-    if(fs.existsSync(uploadFolder)){
-      fs.rmSync(uploadFolder, {recursive: true})
     }
 
     await mongodb.updateDowloadStatusByFileId(file_id, 'removed')
