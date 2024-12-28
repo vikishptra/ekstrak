@@ -3,8 +3,8 @@ import path from "path";
 import { globSync } from "glob";
 import { systemInfoRegex, userPassRegex } from "./regex";
 import crypto, { randomUUID } from 'crypto'
-import gov from '../gov.json'
-import edu from '../edu.json'
+import gov from '../updated_gov.json'
+import edu from '../updated_edu.json'
 import mongodb from "../utils/mongodb";
 import { IFileStatus } from "./telegram";
 interface ParsedJSONData {
@@ -171,11 +171,9 @@ class Parser {
           }
           const isDevice = pass.url?.match(/android:\/\//)
           if(isDevice?.length && pass.url){
-            const deviceTld = pass.url?.match(/@([\w.]+)\//)[0]
-            const arr = deviceTld?.replace(/@|\//g, "").split(".")
-            arr.shift()
-            arr.unshift("android")
-            flagUser = arr.join(".")
+            const deviceTld = pass.url?.match(/com\.\w+/)[0]
+            const arr = deviceTld?.replace(/com\./, "")
+            flagUser = arr+".android"
           }
           pass.flag_edu = flagEdu ?? "-"
           pass.flag_gov = flagGov ?? "-"

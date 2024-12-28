@@ -1,0 +1,966 @@
+[
+  {
+    "domain": ".edu",
+    "country": "US"
+  },
+  {
+    "domain": ".ac.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".sch.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".edu.af",
+    "country": "AF"
+  },
+  {
+    "domain": ".edu.al",
+    "country": "AL"
+  },
+  {
+    "domain": ".edu.dz",
+    "country": "DZ"
+  },
+  {
+    "domain": ".edu.as",
+    "country": "AS"
+  },
+  {
+    "domain": ".edu.ad",
+    "country": "AD"
+  },
+  {
+    "domain": ".edu.ao",
+    "country": "AO"
+  },
+  {
+    "domain": ".edu.ai",
+    "country": "AI"
+  },
+  {
+    "domain": ".edu.aq",
+    "country": "AQ"
+  },
+  {
+    "domain": ".edu.ag",
+    "country": "AG"
+  },
+  {
+    "domain": ".edu.ar",
+    "country": "AR"
+  },
+  {
+    "domain": ".edu.am",
+    "country": "AM"
+  },
+  {
+    "domain": ".edu.aw",
+    "country": "AW"
+  },
+  {
+    "domain": ".edu.au",
+    "country": "AU"
+  },
+  {
+    "domain": ".edu.at",
+    "country": "AT"
+  },
+  {
+    "domain": ".edu.az",
+    "country": "AZ"
+  },
+  {
+    "domain": ".edu.bs",
+    "country": "BS"
+  },
+  {
+    "domain": ".edu.bh",
+    "country": "BH"
+  },
+  {
+    "domain": ".edu.bd",
+    "country": "BD"
+  },
+  {
+    "domain": ".edu.bb",
+    "country": "BB"
+  },
+  {
+    "domain": ".edu.by",
+    "country": "BY"
+  },
+  {
+    "domain": ".edu.be",
+    "country": "BE"
+  },
+  {
+    "domain": ".edu.bz",
+    "country": "BZ"
+  },
+  {
+    "domain": ".edu.bj",
+    "country": "BJ"
+  },
+  {
+    "domain": ".edu.bm",
+    "country": "BM"
+  },
+  {
+    "domain": ".edu.bt",
+    "country": "BT"
+  },
+  {
+    "domain": ".edu.bo",
+    "country": "BO"
+  },
+  {
+    "domain": ".edu.ba",
+    "country": "BA"
+  },
+  {
+    "domain": ".edu.bw",
+    "country": "BW"
+  },
+  {
+    "domain": ".edu.br",
+    "country": "BR"
+  },
+  {
+    "domain": ".edu.bn",
+    "country": "Brunei"
+  },
+  {
+    "domain": ".edu.bg",
+    "country": "BG"
+  },
+  {
+    "domain": ".edu.bf",
+    "country": "BF"
+  },
+  {
+    "domain": ".edu.bi",
+    "country": "BI"
+  },
+  {
+    "domain": ".edu.kh",
+    "country": "KH"
+  },
+  {
+    "domain": ".edu.cm",
+    "country": "CM"
+  },
+  {
+    "domain": ".edu.ca",
+    "country": "CA"
+  },
+  {
+    "domain": ".edu.cv",
+    "country": "CV"
+  },
+  {
+    "domain": ".edu.ky",
+    "country": "KY"
+  },
+  {
+    "domain": ".edu.cf",
+    "country": "CF"
+  },
+  {
+    "domain": ".edu.td",
+    "country": "TD"
+  },
+  {
+    "domain": ".edu.cl",
+    "country": "CL"
+  },
+  {
+    "domain": ".edu.cn",
+    "country": "CN"
+  },
+  {
+    "domain": ".edu.co",
+    "country": "CO"
+  },
+  {
+    "domain": ".edu.km",
+    "country": "KM"
+  },
+  {
+    "domain": ".edu.cd",
+    "country": "CD"
+  },
+  {
+    "domain": ".edu.cg",
+    "country": "CG"
+  },
+  {
+    "domain": ".edu.ck",
+    "country": "CK"
+  },
+  {
+    "domain": ".edu.cr",
+    "country": "CR"
+  },
+  {
+    "domain": ".edu.ci",
+    "country": "CI"
+  },
+  {
+    "domain": ".edu.hr",
+    "country": "HR"
+  },
+  {
+    "domain": ".edu.cu",
+    "country": "CU"
+  },
+  {
+    "domain": ".edu.cy",
+    "country": "CY"
+  },
+  {
+    "domain": ".edu.cz",
+    "country": "CZ"
+  },
+  {
+    "domain": ".edu.dk",
+    "country": "DK"
+  },
+  {
+    "domain": ".edu.dj",
+    "country": "DJ"
+  },
+  {
+    "domain": ".edu.dm",
+    "country": "DM"
+  },
+  {
+    "domain": ".edu.do",
+    "country": "DO"
+  },
+  {
+    "domain": ".edu.ec",
+    "country": "EC"
+  },
+  {
+    "domain": ".edu.eg",
+    "country": "EG"
+  },
+  {
+    "domain": ".edu.sv",
+    "country": "SV"
+  },
+  {
+    "domain": ".edu.gq",
+    "country": "GQ"
+  },
+  {
+    "domain": ".edu.er",
+    "country": "ER"
+  },
+  {
+    "domain": ".edu.ee",
+    "country": "EE"
+  },
+  {
+    "domain": ".edu.et",
+    "country": "ET"
+  },
+  {
+    "domain": ".edu.fj",
+    "country": "FJ"
+  },
+  {
+    "domain": ".edu.fi",
+    "country": "FI"
+  },
+  {
+    "domain": ".edu.fr",
+    "country": "FR"
+  },
+  {
+    "domain": ".ac.fr",
+    "country": "FR"
+  },
+  {
+    "domain": ".edu.gf",
+    "country": "GF"
+  },
+  {
+    "domain": ".edu.pf",
+    "country": "PF"
+  },
+  {
+    "domain": ".edu.ga",
+    "country": "GA"
+  },
+  {
+    "domain": ".edu.gm",
+    "country": "GM"
+  },
+  {
+    "domain": ".edu.ge",
+    "country": "GE"
+  },
+  {
+    "domain": ".edu.de",
+    "country": "DE"
+  },
+  {
+    "domain": ".edu.gh",
+    "country": "GH"
+  },
+  {
+    "domain": ".edu.gi",
+    "country": "GI"
+  },
+  {
+    "domain": ".edu.gr",
+    "country": "GR"
+  },
+  {
+    "domain": ".edu.gl",
+    "country": "GL"
+  },
+  {
+    "domain": ".edu.gd",
+    "country": "GD"
+  },
+  {
+    "domain": ".edu.gp",
+    "country": "GP"
+  },
+  {
+    "domain": ".edu.gu",
+    "country": "GU"
+  },
+  {
+    "domain": ".edu.gt",
+    "country": "GT"
+  },
+  {
+    "domain": ".edu.gg",
+    "country": "GG"
+  },
+  {
+    "domain": ".edu.gn",
+    "country": "GN"
+  },
+  {
+    "domain": ".edu.gw",
+    "country": "GW"
+  },
+  {
+    "domain": ".edu.gy",
+    "country": "GY"
+  },
+  {
+    "domain": ".edu.ht",
+    "country": "HT"
+  },
+  {
+    "domain": ".edu.hn",
+    "country": "HN"
+  },
+  {
+    "domain": ".edu.hk",
+    "country": "HK"
+  },
+  {
+    "domain": ".edu.hu",
+    "country": "HU"
+  },
+  {
+    "domain": ".edu.is",
+    "country": "IS"
+  },
+  {
+    "domain": ".edu.in",
+    "country": "IN"
+  },
+  {
+    "domain": ".ac.in",
+    "country": "IN"
+  },
+  {
+    "domain": ".edu.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".sch.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".ac.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".edu.ir",
+    "country": "IR"
+  },
+  {
+    "domain": ".edu.iq",
+    "country": "IQ"
+  },
+  {
+    "domain": ".edu.ie",
+    "country": "IE"
+  },
+  {
+    "domain": ".edu.im",
+    "country": "IM"
+  },
+  {
+    "domain": ".edu.il",
+    "country": "IL"
+  },
+  {
+    "domain": ".edu.it",
+    "country": "IT"
+  },
+  {
+    "domain": ".edu.jm",
+    "country": "JM"
+  },
+  {
+    "domain": ".edu.jp",
+    "country": "JP"
+  },
+  {
+    "domain": ".ac.jp",
+    "country": "JP"
+  },
+  {
+    "domain": ".edu.je",
+    "country": "JE"
+  },
+  {
+    "domain": ".edu.jo",
+    "country": "JO"
+  },
+  {
+    "domain": ".edu.kz",
+    "country": "KZ"
+  },
+  {
+    "domain": ".edu.ke",
+    "country": "KE"
+  },
+  {
+    "domain": ".edu.ki",
+    "country": "KI"
+  },
+  {
+    "domain": ".edu.kp",
+    "country": "KP"
+  },
+  {
+    "domain": ".edu.kr",
+    "country": "KR"
+  },
+  {
+    "domain": ".ac.kr",
+    "country": "KR"
+  },
+  {
+    "domain": ".edu.kw",
+    "country": "KW"
+  },
+  {
+    "domain": ".edu.kg",
+    "country": "KG"
+  },
+  {
+    "domain": ".edu.la",
+    "country": "Laos"
+  },
+  {
+    "domain": ".edu.lv",
+    "country": "LV"
+  },
+  {
+    "domain": ".edu.lb",
+    "country": "LB"
+  },
+  {
+    "domain": ".edu.ls",
+    "country": "LS"
+  },
+  {
+    "domain": ".edu.lr",
+    "country": "LR"
+  },
+  {
+    "domain": ".edu.ly",
+    "country": "LY"
+  },
+  {
+    "domain": ".edu.li",
+    "country": "LI"
+  },
+  {
+    "domain": ".edu.lt",
+    "country": "LT"
+  },
+  {
+    "domain": ".edu.lu",
+    "country": "LU"
+  },
+  {
+    "domain": ".edu.mo",
+    "country": "MO"
+  },
+  {
+    "domain": ".edu.mk",
+    "country": "MK"
+  },
+  {
+    "domain": ".edu.mg",
+    "country": "MG"
+  },
+  {
+    "domain": ".edu.mw",
+    "country": "MW"
+  },
+  {
+    "domain": ".edu.my",
+    "country": "MY"
+  },
+  {
+    "domain": ".edu.mv",
+    "country": "MV"
+  },
+  {
+    "domain": ".edu.ml",
+    "country": "ML"
+  },
+  {
+    "domain": ".edu.mt",
+    "country": "MT"
+  },
+  {
+    "domain": ".edu.mh",
+    "country": "MH"
+  },
+  {
+    "domain": ".edu.mq",
+    "country": "MQ"
+  },
+  {
+    "domain": ".edu.mr",
+    "country": "MR"
+  },
+  {
+    "domain": ".edu.mu",
+    "country": "MU"
+  },
+  {
+    "domain": ".edu.yt",
+    "country": "YT"
+  },
+  {
+    "domain": ".edu.mx",
+    "country": "MX"
+  },
+  {
+    "domain": ".edu.fm",
+    "country": "FM"
+  },
+  {
+    "domain": ".edu.md",
+    "country": "MD"
+  },
+  {
+    "domain": ".edu.mc",
+    "country": "MC"
+  },
+  {
+    "domain": ".edu.mn",
+    "country": "MN"
+  },
+  {
+    "domain": ".edu.me",
+    "country": "ME"
+  },
+  {
+    "domain": ".edu.ms",
+    "country": "MS"
+  },
+  {
+    "domain": ".edu.ma",
+    "country": "MA"
+  },
+  {
+    "domain": ".edu.mz",
+    "country": "MZ"
+  },
+  {
+    "domain": ".edu.mm",
+    "country": "MM"
+  },
+  {
+    "domain": ".edu.na",
+    "country": "NA"
+  },
+  {
+    "domain": ".edu.nr",
+    "country": "NR"
+  },
+  {
+    "domain": ".edu.np",
+    "country": "NP"
+  },
+  {
+    "domain": ".edu.nl",
+    "country": "NL"
+  },
+  {
+    "domain": ".edu.nc",
+    "country": "NC"
+  },
+  {
+    "domain": ".ac.nz",
+    "country": "NZ"
+  },
+  {
+    "domain": ".school.nz",
+    "country": "NZ"
+  },
+  {
+    "domain": ".edu.ni",
+    "country": "NI"
+  },
+  {
+    "domain": ".edu.ne",
+    "country": "NE"
+  },
+  {
+    "domain": ".edu.ng",
+    "country": "NG"
+  },
+  {
+    "domain": ".edu.nu",
+    "country": "NU"
+  },
+  {
+    "domain": ".edu.nf",
+    "country": "NF"
+  },
+  {
+    "domain": ".edu.mp",
+    "country": "MP"
+  },
+  {
+    "domain": ".edu.no",
+    "country": "NO"
+  },
+  {
+    "domain": ".edu.om",
+    "country": "OM"
+  },
+  {
+    "domain": ".edu.pk",
+    "country": "PK"
+  },
+  {
+    "domain": ".edu.pw",
+    "country": "PW"
+  },
+  {
+    "domain": ".edu.ps",
+    "country": "PS"
+  },
+  {
+    "domain": ".edu.pa",
+    "country": "PA"
+  },
+  {
+    "domain": ".edu.pg",
+    "country": "PG"
+  },
+  {
+    "domain": ".edu.py",
+    "country": "PY"
+  },
+  {
+    "domain": ".edu.pe",
+    "country": "PE"
+  },
+  {
+    "domain": ".edu.ph",
+    "country": "PH"
+  },
+  {
+    "domain": ".edu.pl",
+    "country": "PL"
+  },
+  {
+    "domain": ".edu.pt",
+    "country": "PT"
+  },
+  {
+    "domain": ".edu.pr",
+    "country": "PR"
+  },
+  {
+    "domain": ".edu.qa",
+    "country": "QA"
+  },
+  {
+    "domain": ".edu.ro",
+    "country": "RO"
+  },
+  {
+    "domain": ".edu.ru",
+    "country": "Russia"
+  },
+  {
+    "domain": ".edu.rw",
+    "country": "RW"
+  },
+  {
+    "domain": ".edu.sh",
+    "country": "SH"
+  },
+  {
+    "domain": ".edu.kn",
+    "country": "KN"
+  },
+  {
+    "domain": ".edu.lc",
+    "country": "LC"
+  },
+  {
+    "domain": ".edu.vc",
+    "country": "VC"
+  },
+  {
+    "domain": ".edu.ws",
+    "country": "WS"
+  },
+  {
+    "domain": ".edu.sm",
+    "country": "SM"
+  },
+  {
+    "domain": ".edu.st",
+    "country": "ST"
+  },
+  {
+    "domain": ".edu.sa",
+    "country": "SA"
+  },
+  {
+    "domain": ".edu.sn",
+    "country": "SN"
+  },
+  {
+    "domain": ".edu.rs",
+    "country": "RS"
+  },
+  {
+    "domain": ".edu.sc",
+    "country": "SC"
+  },
+  {
+    "domain": ".edu.sl",
+    "country": "SL"
+  },
+  {
+    "domain": ".edu.sg",
+    "country": "SG"
+  },
+  {
+    "domain": ".edu.sk",
+    "country": "SK"
+  },
+  {
+    "domain": ".edu.si",
+    "country": "SI"
+  },
+  {
+    "domain": ".edu.sb",
+    "country": "SB"
+  },
+  {
+    "domain": ".edu.so",
+    "country": "SO"
+  },
+  {
+    "domain": ".edu.za",
+    "country": "ZA"
+  },
+  {
+    "domain": ".ac.za",
+    "country": "ZA"
+  },
+  {
+    "domain": ".edu.ss",
+    "country": "SS"
+  },
+  {
+    "domain": ".edu.es",
+    "country": "ES"
+  },
+  {
+    "domain": ".edu.lk",
+    "country": "LK"
+  },
+  {
+    "domain": ".edu.sd",
+    "country": "SD"
+  },
+  {
+    "domain": ".edu.sr",
+    "country": "SR"
+  },
+  {
+    "domain": ".edu.sz",
+    "country": "SZ"
+  },
+  {
+    "domain": ".edu.se",
+    "country": "SE"
+  },
+  {
+    "domain": ".edu.ch",
+    "country": "CH"
+  },
+  {
+    "domain": ".edu.sy",
+    "country": "Syria"
+  },
+  {
+    "domain": ".edu.tw",
+    "country": "TW"
+  },
+  {
+    "domain": ".edu.tj",
+    "country": "TJ"
+  },
+  {
+    "domain": ".edu.tz",
+    "country": "TZ"
+  },
+  {
+    "domain": ".edu.th",
+    "country": "TH"
+  },
+  {
+    "domain": ".ac.th",
+    "country": "TH"
+  },
+  {
+    "domain": ".edu.tl",
+    "country": "TL"
+  },
+  {
+    "domain": ".edu.tg",
+    "country": "TG"
+  },
+  {
+    "domain": ".edu.tk",
+    "country": "TK"
+  },
+  {
+    "domain": ".edu.to",
+    "country": "TO"
+  },
+  {
+    "domain": ".edu.tt",
+    "country": "TT"
+  },
+  {
+    "domain": ".edu.tn",
+    "country": "TN"
+  },
+  {
+    "domain": ".edu.tr",
+    "country": "TR"
+  },
+  {
+    "domain": ".edu.tm",
+    "country": "TM"
+  },
+  {
+    "domain": ".edu.tc",
+    "country": "TC"
+  },
+  {
+    "domain": ".edu.tv",
+    "country": "TV"
+  },
+  {
+    "domain": ".edu.ug",
+    "country": "UG"
+  },
+  {
+    "domain": ".edu.ua",
+    "country": "UA"
+  },
+  {
+    "domain": ".edu.ae",
+    "country": "AE"
+  },
+  {
+    "domain": ".ac.uk",
+    "country": "GB"
+  },
+  {
+    "domain": ".sch.uk",
+    "country": "US"
+  },
+  {
+    "domain": ".edu",
+    "country": "US"
+  },
+  {
+    "domain": ".edu.us",
+    "country": "US"
+  },
+  {
+    "domain": ".edu.uy",
+    "country": "UY"
+  },
+  {
+    "domain": ".edu.uz",
+    "country": "UZ"
+  },
+  {
+    "domain": ".edu.vu",
+    "country": "VU"
+  },
+  {
+    "domain": ".edu.va",
+    "country": "VA"
+  },
+  {
+    "domain": ".edu.ve",
+    "country": "VE"
+  },
+  {
+    "domain": ".edu.vn",
+    "country": "VN"
+  },
+  {
+    "domain": ".edu.vg",
+    "country": "VG"
+  },
+  {
+    "domain": ".edu.vi",
+    "country": "VI"
+  },
+  {
+    "domain": ".edu.ye",
+    "country": "YE"
+  },
+  {
+    "domain": ".edu.zm",
+    "country": "ZM"
+  },
+  {
+    "domain": ".edu.zw",
+    "country": "ZW"
+  }
+]
