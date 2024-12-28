@@ -150,7 +150,7 @@ class Parser {
               flagThirdParty = emailDomain
             }
             if(urlDomain){
-              const match = urlDomain.match(/([a-zA-Z0-9-]+\.[a-zA-Z]{2,})$/);
+              const match = urlDomain.match(/([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)\/?$/);
               const domain = match ? match[0] : urlDomain;
               flagUser = domain
               const eduRegex = /\.edu(\.\w{2,3})?/
