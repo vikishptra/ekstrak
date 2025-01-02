@@ -22,7 +22,7 @@ const main = async () => {
       try{
         await Promise.all(extractedFile.map(async (d) => {
           const filename = d.name.replace(/\.[a-z]{3,4}$/, "")
-          parser.filterTxt(filename)
+          parser.filterTxt(filename, d)
           const parsedData = parser.parseAndGroupJSON(filename)
           await parser.formatDataWithRegex(parsedData, filename, d.file_id)
         }))

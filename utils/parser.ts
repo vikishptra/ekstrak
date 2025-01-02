@@ -2,10 +2,11 @@ import fs from "fs";
 import path from "path";
 import { globSync } from "glob";
 import { systemInfoRegex, userPassRegex } from "./regex";
-import crypto from 'crypto'
-import gov from '../gov.json'
-import edu from '../edu.json'
+import crypto, { randomUUID } from 'crypto'
+import gov from '../updated_gov.json'
+import edu from '../updated_edu.json'
 import mongodb from "../utils/mongodb";
+import { IFileStatus } from "./telegram";
 interface ParsedJSONData {
   folder: string
   system: Record<string, any>[]
@@ -149,32 +150,30 @@ class Parser {
               flagThirdParty = emailDomain
             }
             if(urlDomain){
-              const match = urlDomain.match(/([a-zA-Z0-9-]+\.[a-zA-Z]{2,})$/);
+              const match = urlDomain.match(/([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)\/?$/);
               const domain = match ? match[0] : urlDomain;
               flagUser = domain
               const eduRegex = /\.edu(\.\w{2,3})?/
               const govRegex = /\.gov(\.\w{2,3})?/
-              const eduTld = urlDomain.match(eduRegex)
-              const govTld = urlDomain.match(govRegex)
+              const eduTld = urlDomain?.match(eduRegex)
+              const govTld = urlDomain?.match(govRegex)
               let findGov = null
               let findEdu = null
               if(eduTld?.length){
                 findEdu = edu.find(d => d.domain === eduTld[0])
-                flagEdu = findEdu.country ?? "-"
+                flagEdu = findEdu?.country ?? "-"
               }
               if(govTld?.length){
                 findGov = gov.find(d => d.domain === govTld[0])
-                flagGov = findGov.country ?? "-"
+                flagGov = findGov?.country ?? "-"
               }
             }
           }
           const isDevice = pass.url?.match(/android:\/\//)
           if(isDevice?.length && pass.url){
-            const deviceTld = pass.url.match(/@([\w.]+)\//)[0]
-            const arr = deviceTld.replace(/@|\//g, "").split(".")
-            arr.shift()
-            arr.unshift("android")
-            flagUser = arr.join(".")
+            const deviceTld = pass.url?.match(/com\.\w+/)[0]
+            const arr = deviceTld?.replace(/com\./, "")
+            flagUser = arr+".android"
           }
           pass.flag_edu = flagEdu ?? "-"
           pass.flag_gov = flagGov ?? "-"
@@ -245,7 +244,7 @@ class Parser {
     return data
   }
 
-  public async filterTxt(filename: string) {
+  public async filterTxt(filename: string, data: IFileStatus) {
     const searchDir = `${process.cwd()}/_td_files/documents/extracted/${filename}`; 
     const targetDir = `${process.cwd()}/_td_files/documents/filtered/${filename}`;
     if (!fs.existsSync(targetDir)) {
@@ -264,7 +263,25 @@ class Parser {
             // console.log(`Copied: ${file} -> ${targetPath}`);
         });
     });
-    
+    const archivePatterns = ["*.zip", "*.rar"];
+    const newFile: IFileStatus[] = []
+    const archiveTargetDir = `${process.cwd()}/_td_files/documents`;
+    await Promise.all(archivePatterns.map(async (pattern) => {
+      const files = globSync(path.join(searchDir, "**", pattern));
+      await Promise.all(files.map(async (file) => {
+        const fileName = path.basename(file);
+        const targetPath = path.join(archiveTargetDir, fileName);
+        fs.renameSync(file, targetPath);
+        newFile.push({
+          file_id: randomUUID().toString(),
+          mimetype: fileName.match(".zip") ? "application/zip" : "application/vnd.rar",
+          name: fileName,
+          password: data.password,
+          status: "downloaded"
+        })
+      }))
+    }))
+    await mongodb.insertDownloadFile(newFile)
     console.log("All matching files have been copied.");
   }
   public parseSystemTextToJson (text: string): Record<string, any> {

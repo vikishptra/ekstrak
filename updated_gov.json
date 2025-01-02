@@ -1,0 +1,990 @@
+[
+  {
+    "domain": ".gov.ac",
+    "country": "AC"
+  },
+  {
+    "domain": ".gov.ae",
+    "country": "AE"
+  },
+  {
+    "domain": ".go.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".gov.af",
+    "country": "AF"
+  },
+  {
+    "domain": ".gov.al",
+    "country": "AL"
+  },
+  {
+    "domain": ".gov.dz",
+    "country": "DZ"
+  },
+  {
+    "domain": ".gov.as",
+    "country": "AS"
+  },
+  {
+    "domain": ".gov.ad",
+    "country": "AD"
+  },
+  {
+    "domain": ".gov.ao",
+    "country": "AO"
+  },
+  {
+    "domain": ".gov.ai",
+    "country": "AI"
+  },
+  {
+    "domain": ".gov.aq",
+    "country": "AQ"
+  },
+  {
+    "domain": ".gov.ag",
+    "country": "AG"
+  },
+  {
+    "domain": ".gov.ar",
+    "country": "AR"
+  },
+  {
+    "domain": ".gov.am",
+    "country": "AM"
+  },
+  {
+    "domain": ".gov.aw",
+    "country": "AW"
+  },
+  {
+    "domain": ".gov.au",
+    "country": "AU"
+  },
+  {
+    "domain": ".gov.at",
+    "country": "AT"
+  },
+  {
+    "domain": ".gov.az",
+    "country": "AZ"
+  },
+  {
+    "domain": ".gov.bs",
+    "country": "BS"
+  },
+  {
+    "domain": ".gov.bh",
+    "country": "BH"
+  },
+  {
+    "domain": ".gov.bd",
+    "country": "BD"
+  },
+  {
+    "domain": ".gov.bb",
+    "country": "BB"
+  },
+  {
+    "domain": ".gov.by",
+    "country": "BY"
+  },
+  {
+    "domain": ".gov.be",
+    "country": "BE"
+  },
+  {
+    "domain": ".gov.bz",
+    "country": "BZ"
+  },
+  {
+    "domain": ".gov.bj",
+    "country": "BJ"
+  },
+  {
+    "domain": ".gov.bm",
+    "country": "BM"
+  },
+  {
+    "domain": ".gov.bt",
+    "country": "BT"
+  },
+  {
+    "domain": ".gov.bo",
+    "country": "BO"
+  },
+  {
+    "domain": ".gov.ba",
+    "country": "BA"
+  },
+  {
+    "domain": ".gov.bw",
+    "country": "BW"
+  },
+  {
+    "domain": ".gov.bv",
+    "country": "BV"
+  },
+  {
+    "domain": ".gov.br",
+    "country": "BR"
+  },
+  {
+    "domain": ".gov.io",
+    "country": "IO"
+  },
+  {
+    "domain": ".gov.bn",
+    "country": "BN"
+  },
+  {
+    "domain": ".gov.bg",
+    "country": "BG"
+  },
+  {
+    "domain": ".gov.bf",
+    "country": "BF"
+  },
+  {
+    "domain": ".gov.bi",
+    "country": "BI"
+  },
+  {
+    "domain": ".gov.kh",
+    "country": "KH"
+  },
+  {
+    "domain": ".gov.cm",
+    "country": "CM"
+  },
+  {
+    "domain": ".gov.ca",
+    "country": "CA"
+  },
+  {
+    "domain": ".gov.cv",
+    "country": "CV"
+  },
+  {
+    "domain": ".gov.ky",
+    "country": "KY"
+  },
+  {
+    "domain": ".gov.cf",
+    "country": "CF"
+  },
+  {
+    "domain": ".gov.td",
+    "country": "TD"
+  },
+  {
+    "domain": ".gov.cl",
+    "country": "CL"
+  },
+  {
+    "domain": ".gov.cn",
+    "country": "CN"
+  },
+  {
+    "domain": ".gov.cx",
+    "country": "CX"
+  },
+  {
+    "domain": ".gov.cc",
+    "country": "CC"
+  },
+  {
+    "domain": ".gov.co",
+    "country": "CO"
+  },
+  {
+    "domain": ".gov.km",
+    "country": "KM"
+  },
+  {
+    "domain": ".gov.cg",
+    "country": "CG"
+  },
+  {
+    "domain": ".gov.cd",
+    "country": "CD"
+  },
+  {
+    "domain": ".gov.ck",
+    "country": "CK"
+  },
+  {
+    "domain": ".gov.cr",
+    "country": "CR"
+  },
+  {
+    "domain": ".gov.ci",
+    "country": "CI"
+  },
+  {
+    "domain": ".gov.hr",
+    "country": "HR"
+  },
+  {
+    "domain": ".gov.cu",
+    "country": "CU"
+  },
+  {
+    "domain": ".gov.cy",
+    "country": "CY"
+  },
+  {
+    "domain": ".gov.cz",
+    "country": "CZ"
+  },
+  {
+    "domain": ".gov.dk",
+    "country": "DK"
+  },
+  {
+    "domain": ".gov.dj",
+    "country": "DJ"
+  },
+  {
+    "domain": ".gov.dm",
+    "country": "DM"
+  },
+  {
+    "domain": ".gov.do",
+    "country": "DO"
+  },
+  {
+    "domain": ".gov.ec",
+    "country": "EC"
+  },
+  {
+    "domain": ".gov.eg",
+    "country": "EG"
+  },
+  {
+    "domain": ".gov.sv",
+    "country": "SV"
+  },
+  {
+    "domain": ".gov.gq",
+    "country": "GQ"
+  },
+  {
+    "domain": ".gov.er",
+    "country": "ER"
+  },
+  {
+    "domain": ".gov.ee",
+    "country": "EE"
+  },
+  {
+    "domain": ".gov.et",
+    "country": "ET"
+  },
+  {
+    "domain": ".gov.fk",
+    "country": "FK"
+  },
+  {
+    "domain": ".gov.fo",
+    "country": "FO"
+  },
+  {
+    "domain": ".gov.fj",
+    "country": "FJ"
+  },
+  {
+    "domain": ".gov.fi",
+    "country": "FI"
+  },
+  {
+    "domain": ".gov.fr",
+    "country": "FR"
+  },
+  {
+    "domain": ".gouv.fr",
+    "country": "FR"
+  },
+  {
+    "domain": ".gov.gf",
+    "country": "GF"
+  },
+  {
+    "domain": ".gov.pf",
+    "country": "PF"
+  },
+  {
+    "domain": ".gov.tf",
+    "country": "TF"
+  },
+  {
+    "domain": ".gov.ga",
+    "country": "GA"
+  },
+  {
+    "domain": ".gov.gm",
+    "country": "GM"
+  },
+  {
+    "domain": ".gov.ge",
+    "country": "GE"
+  },
+  {
+    "domain": ".gov.de",
+    "country": "DE"
+  },
+  {
+    "domain": ".gov.gh",
+    "country": "GH"
+  },
+  {
+    "domain": ".gov.gi",
+    "country": "GI"
+  },
+  {
+    "domain": ".gov.gr",
+    "country": "GR"
+  },
+  {
+    "domain": ".gov.gl",
+    "country": "GL"
+  },
+  {
+    "domain": ".gov.gd",
+    "country": "GD"
+  },
+  {
+    "domain": ".gov.gp",
+    "country": "GP"
+  },
+  {
+    "domain": ".gov.gu",
+    "country": "GU"
+  },
+  {
+    "domain": ".gov.gt",
+    "country": "GT"
+  },
+  {
+    "domain": ".gov.gg",
+    "country": "GG"
+  },
+  {
+    "domain": ".gov.gn",
+    "country": "GN"
+  },
+  {
+    "domain": ".gov.gw",
+    "country": "GW"
+  },
+  {
+    "domain": ".gov.gy",
+    "country": "GY"
+  },
+  {
+    "domain": ".gov.ht",
+    "country": "HT"
+  },
+  {
+    "domain": ".gov.hm",
+    "country": "HM"
+  },
+  {
+    "domain": ".gov.va",
+    "country": "VA"
+  },
+  {
+    "domain": ".gov.hn",
+    "country": "HN"
+  },
+  {
+    "domain": ".gov.hk",
+    "country": "HK"
+  },
+  {
+    "domain": ".gov.hu",
+    "country": "HU"
+  },
+  {
+    "domain": ".gov.is",
+    "country": "IS"
+  },
+  {
+    "domain": ".gov.in",
+    "country": "IN"
+  },
+  {
+    "domain": ".go.id",
+    "country": "ID"
+  },
+  {
+    "domain": ".gov.ir",
+    "country": "IR"
+  },
+  {
+    "domain": ".gov.iq",
+    "country": "IQ"
+  },
+  {
+    "domain": ".gov.ie",
+    "country": "IE"
+  },
+  {
+    "domain": ".gov.im",
+    "country": "IM"
+  },
+  {
+    "domain": ".gov.il",
+    "country": "IL"
+  },
+  {
+    "domain": ".gov.it",
+    "country": "IT"
+  },
+  {
+    "domain": ".gov.jm",
+    "country": "JM"
+  },
+  {
+    "domain": ".gov.jp",
+    "country": "JP"
+  },
+  {
+    "domain": ".go.jp",
+    "country": "JP"
+  },
+  {
+    "domain": ".gov.je",
+    "country": "JE"
+  },
+  {
+    "domain": ".gov.jo",
+    "country": "JO"
+  },
+  {
+    "domain": ".gov.kz",
+    "country": "KZ"
+  },
+  {
+    "domain": ".gov.ke",
+    "country": "KE"
+  },
+  {
+    "domain": ".gov.ki",
+    "country": "KI"
+  },
+  {
+    "domain": ".gov.kp",
+    "country": "KP"
+  },
+  {
+    "domain": ".gov.kr",
+    "country": "KR"
+  },
+  {
+    "domain": ".go.kr",
+    "country": "KR"
+  },
+  {
+    "domain": ".gov.kw",
+    "country": "KW"
+  },
+  {
+    "domain": ".gov.kg",
+    "country": "KG"
+  },
+  {
+    "domain": ".gov.la",
+    "country": "LA"
+  },
+  {
+    "domain": ".gov.lv",
+    "country": "LV"
+  },
+  {
+    "domain": ".gov.lb",
+    "country": "LB"
+  },
+  {
+    "domain": ".gov.ls",
+    "country": "LS"
+  },
+  {
+    "domain": ".gov.lr",
+    "country": "LR"
+  },
+  {
+    "domain": ".gov.ly",
+    "country": "LY"
+  },
+  {
+    "domain": ".gov.li",
+    "country": "LI"
+  },
+  {
+    "domain": ".gov.lt",
+    "country": "LT"
+  },
+  {
+    "domain": ".gov.lu",
+    "country": "LU"
+  },
+  {
+    "domain": ".gov.mo",
+    "country": "MO"
+  },
+  {
+    "domain": ".gov.mk",
+    "country": "MK"
+  },
+  {
+    "domain": ".gov.mg",
+    "country": "MG"
+  },
+  {
+    "domain": ".gov.mw",
+    "country": "MW"
+  },
+  {
+    "domain": ".gov.my",
+    "country": "MY"
+  },
+  {
+    "domain": ".gov.mv",
+    "country": "MV"
+  },
+  {
+    "domain": ".gov.ml",
+    "country": "ML"
+  },
+  {
+    "domain": ".gov.mt",
+    "country": "MT"
+  },
+  {
+    "domain": ".gov.mh",
+    "country": "MH"
+  },
+  {
+    "domain": ".gov.mq",
+    "country": "MQ"
+  },
+  {
+    "domain": ".gov.mr",
+    "country": "MR"
+  },
+  {
+    "domain": ".gov.mu",
+    "country": "MU"
+  },
+  {
+    "domain": ".gov.yt",
+    "country": "YT"
+  },
+  {
+    "domain": ".gob.mx",
+    "country": "MX"
+  },
+  {
+    "domain": ".gov.fm",
+    "country": "FM"
+  },
+  {
+    "domain": ".gov.md",
+    "country": "MD"
+  },
+  {
+    "domain": ".gov.mc",
+    "country": "MC"
+  },
+  {
+    "domain": ".gov.mn",
+    "country": "MN"
+  },
+  {
+    "domain": ".gov.me",
+    "country": "ME"
+  },
+  {
+    "domain": ".gov.ms",
+    "country": "MS"
+  },
+  {
+    "domain": ".gov.ma",
+    "country": "MA"
+  },
+  {
+    "domain": ".gov.mz",
+    "country": "MZ"
+  },
+  {
+    "domain": ".gov.mm",
+    "country": "MM"
+  },
+  {
+    "domain": ".gov.na",
+    "country": "NA"
+  },
+  {
+    "domain": ".gov.nr",
+    "country": "NR"
+  },
+  {
+    "domain": ".gov.np",
+    "country": "NP"
+  },
+  {
+    "domain": ".gov.nl",
+    "country": "NL"
+  },
+  {
+    "domain": ".gov.nc",
+    "country": "NC"
+  },
+  {
+    "domain": ".govt.nz",
+    "country": "NZ"
+  },
+  {
+    "domain": ".gov.ni",
+    "country": "NI"
+  },
+  {
+    "domain": ".gov.ne",
+    "country": "NE"
+  },
+  {
+    "domain": ".gov.ng",
+    "country": "NG"
+  },
+  {
+    "domain": ".gov.nu",
+    "country": "NU"
+  },
+  {
+    "domain": ".gov.nf",
+    "country": "NF"
+  },
+  {
+    "domain": ".gov.mp",
+    "country": "MP"
+  },
+  {
+    "domain": ".gov.no",
+    "country": "NO"
+  },
+  {
+    "domain": ".gov.om",
+    "country": "OM"
+  },
+  {
+    "domain": ".gov.pk",
+    "country": "PK"
+  },
+  {
+    "domain": ".gov.pw",
+    "country": "PW"
+  },
+  {
+    "domain": ".gov.ps",
+    "country": "PS"
+  },
+  {
+    "domain": ".gov.pa",
+    "country": "PA"
+  },
+  {
+    "domain": ".gov.pg",
+    "country": "PG"
+  },
+  {
+    "domain": ".gov.py",
+    "country": "PY"
+  },
+  {
+    "domain": ".gov.pe",
+    "country": "PE"
+  },
+  {
+    "domain": ".gov.ph",
+    "country": "PH"
+  },
+  {
+    "domain": ".gov.pn",
+    "country": "PN"
+  },
+  {
+    "domain": ".gov.pl",
+    "country": "PL"
+  },
+  {
+    "domain": ".gov.pt",
+    "country": "PT"
+  },
+  {
+    "domain": ".gov.pr",
+    "country": "PR"
+  },
+  {
+    "domain": ".gov.qa",
+    "country": "QA"
+  },
+  {
+    "domain": ".gov.re",
+    "country": "RE"
+  },
+  {
+    "domain": ".gov.ro",
+    "country": "RO"
+  },
+  {
+    "domain": ".gov.ru",
+    "country": "RU"
+  },
+  {
+    "domain": ".gov.rw",
+    "country": "RW"
+  },
+  {
+    "domain": ".gov.kn",
+    "country": "KN"
+  },
+  {
+    "domain": ".gov.lc",
+    "country": "LC"
+  },
+  {
+    "domain": ".gov.vc",
+    "country": "VC"
+  },
+  {
+    "domain": ".gov.ws",
+    "country": "WS"
+  },
+  {
+    "domain": ".gov.sm",
+    "country": "SM"
+  },
+  {
+    "domain": ".gov.st",
+    "country": "ST"
+  },
+  {
+    "domain": ".gov.sa",
+    "country": "SA"
+  },
+  {
+    "domain": ".gov.sn",
+    "country": "SN"
+  },
+  {
+    "domain": ".gov.rs",
+    "country": "RS"
+  },
+  {
+    "domain": ".gov.sc",
+    "country": "SC"
+  },
+  {
+    "domain": ".gov.sl",
+    "country": "SL"
+  },
+  {
+    "domain": ".gov.sg",
+    "country": "SG"
+  },
+  {
+    "domain": ".gov.sk",
+    "country": "SK"
+  },
+  {
+    "domain": ".gov.si",
+    "country": "SI"
+  },
+  {
+    "domain": ".gov.sb",
+    "country": "SB"
+  },
+  {
+    "domain": ".gov.so",
+    "country": "SO"
+  },
+  {
+    "domain": ".gov.za",
+    "country": "ZA"
+  },
+  {
+    "domain": ".gov.gs",
+    "country": "GS"
+  },
+  {
+    "domain": ".gov.ss",
+    "country": "SS"
+  },
+  {
+    "domain": ".gov.es",
+    "country": "ES"
+  },
+  {
+    "domain": ".gov.lk",
+    "country": "LK"
+  },
+  {
+    "domain": ".gov.sh",
+    "country": "SH"
+  },
+  {
+    "domain": ".gov.pm",
+    "country": "PM"
+  },
+  {
+    "domain": ".gov.sd",
+    "country": "SD"
+  },
+  {
+    "domain": ".gov.sr",
+    "country": "SR"
+  },
+  {
+    "domain": ".gov.sj",
+    "country": "SJ"
+  },
+  {
+    "domain": ".gov.sz",
+    "country": "SZ"
+  },
+  {
+    "domain": ".gov.se",
+    "country": "SE"
+  },
+  {
+    "domain": ".gov.ch",
+    "country": "CH"
+  },
+  {
+    "domain": ".gov.sy",
+    "country": "SY"
+  },
+  {
+    "domain": ".gov.tw",
+    "country": "TW"
+  },
+  {
+    "domain": ".gov.tj",
+    "country": "TJ"
+  },
+  {
+    "domain": ".gov.tz",
+    "country": "TZ"
+  },
+  {
+    "domain": ".gov.th",
+    "country": "TH"
+  },
+  {
+    "domain": ".go.th",
+    "country": "TH"
+  },
+  {
+    "domain": ".gov.tl",
+    "country": "TL"
+  },
+  {
+    "domain": ".gov.tg",
+    "country": "TG"
+  },
+  {
+    "domain": ".gov.tk",
+    "country": "TK"
+  },
+  {
+    "domain": ".gov.to",
+    "country": "TO"
+  },
+  {
+    "domain": ".gov.tt",
+    "country": "TT"
+  },
+  {
+    "domain": ".gov.tn",
+    "country": "TN"
+  },
+  {
+    "domain": ".gov.tr",
+    "country": "TR"
+  },
+  {
+    "domain": ".gov.tm",
+    "country": "TM"
+  },
+  {
+    "domain": ".gov.tc",
+    "country": "TC"
+  },
+  {
+    "domain": ".gov.tv",
+    "country": "TV"
+  },
+  {
+    "domain": ".gov.ug",
+    "country": "UG"
+  },
+  {
+    "domain": ".gov.ua",
+    "country": "UA"
+  },
+  {
+    "domain": ".gov.ae",
+    "country": "AE"
+  },
+  {
+    "domain": ".gov.uk",
+    "country": "GB"
+  },
+  {
+    "domain": ".gov",
+    "country": "US"
+  },
+  {
+    "domain": ".gov.us",
+    "country": "US"
+  },
+  {
+    "domain": ".gov.uy",
+    "country": "UY"
+  },
+  {
+    "domain": ".gov.uz",
+    "country": "UZ"
+  },
+  {
+    "domain": ".gov.vu",
+    "country": "VU"
+  },
+  {
+    "domain": ".gov.ve",
+    "country": "VE"
+  },
+  {
+    "domain": ".gov.vn",
+    "country": "VN"
+  },
+  {
+    "domain": ".gov.wf",
+    "country": "WF"
+  },
+  {
+    "domain": ".gov.ye",
+    "country": "YE"
+  },
+  {
+    "domain": ".gov.zm",
+    "country": "ZM"
+  },
+  {
+    "domain": ".gov.zw",
+    "country": "ZW"
+  }
+]
