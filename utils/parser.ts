@@ -55,141 +55,146 @@ class Parser {
     try {
       let finalData: IFinalData[] = []
       parsedData.map(data => {
-        if(data.password.length){
-          const systemInfo: ISysInfo = {
-            antivirus: [],
-            computer_name: "-",
-            ip: "-",
-            location: "-",
-            machine_id: "-",
-            operation_sistem: "-",
-            path: "-",
-            date_time_compromised: null,
-            malware_name: "unknown",
-            
-          }
-          if(data.system.length !== 0){
-            const sys = data.system[0]
-            for(const syskey in sys){
-              if(data.folder){
-                let matchLoc = data.folder.match(/^[A-Z][A-Z](\-|_|\[)/)
-                if(!matchLoc) {
-                  matchLoc = data.folder.match(/^\[[A-Z][A-Z]\]/)
-                } 
-                if(matchLoc?.length){
-                  systemInfo.location = matchLoc[0].replace(/(\-|_|\[)/, "") ?? "-"
+        try{
+          if(data.password.length){
+            const systemInfo: ISysInfo = {
+              antivirus: [],
+              computer_name: "-",
+              ip: "-",
+              location: "-",
+              machine_id: "-",
+              operation_sistem: "-",
+              path: "-",
+              date_time_compromised: null,
+              malware_name: "unknown",
+              
+            }
+            if(data.system.length !== 0){
+              const sys = data.system[0]
+              for(const syskey in sys){
+                if(data.folder){
+                  let matchLoc = data.folder.match(/^[A-Z][A-Z](\-|_|\[)/)
+                  if(!matchLoc) {
+                    matchLoc = data.folder.match(/^\[[A-Z][A-Z]\]/)
+                  } 
+                  if(matchLoc?.length){
+                    systemInfo.location = matchLoc[0].replace(/(\-|_|\[)/, "") ?? "-"
+                  }
                 }
-              }
-              if(syskey.match(systemInfoRegex.RegExpMalwareName)?.filter(n => n)?.length){
-                systemInfo.malware_name = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpAntivirus)?.filter(n => n)?.length){
-                systemInfo.antivirus = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpComputerName)?.filter(n => n)?.length){
-                systemInfo.computer_name = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpIP)?.filter(n => n)?.length){
-                systemInfo.ip = sys[syskey]
-              }
-              if(systemInfo.location === "-" && syskey.match(systemInfoRegex.RegExpLocation)?.filter(n => n)?.length){
-                systemInfo.location = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpMachineID)?.filter(n => n)?.length){
-                systemInfo.machine_id = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpOperationSistem)?.filter(n => n)?.length){
-                systemInfo.operation_sistem = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpPath)?.filter(n => n)?.length){
-                systemInfo.path = sys[syskey]
-              }
-              if(syskey.match(systemInfoRegex.RegExpDateCompromised)?.filter(n => n)?.length){
-                systemInfo.date_time_compromised = new Date(sys[syskey])
-              }
-            }
-          }
-          for(const credData of data.password){
-            const pass: IPassData = {
-              flag_employee: "-",
-              flag_thirdparty: "-",
-              flag_user: "-",
-              login: "-",
-              password: "-",
-              url: "-",
-              storage: "-",
-              flag_edu: "-",
-              flag_gov: "-"
-            }
-            for(const credKey in credData){
-              if(credKey.match(userPassRegex.RegExpLogin)?.filter(n => n)?.length){
-                pass.login = credData[credKey]
-              }
-              if(credKey.match(userPassRegex.RegExpPassword)?.filter(n => n)?.length){
-                pass.password = credData[credKey] 
-              }
-              if(credKey.match(userPassRegex.RegExpUrl)?.filter(n => n)?.length){
-                pass.url = credData[credKey]
-              }
-              if(credKey.match(userPassRegex.RegExpStorage)?.filter(n => n)?.length){
-                pass.storage = credData[credKey]
-              }
-            }
-            let flagEmployee = "-"
-            let flagUser = "-"
-            let flagThirdParty = "-"
-            let flagGov = "-"
-            let flagEdu = "-"
-            const emailRegex = /@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
-            const urlRegex = /[https?|android]:\/\/(?:www\.)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/;
-            const urlDomain = pass.url.match(urlRegex)?.length > 1 && pass.url.match(urlRegex)[1]
-            const emailDomain = pass.login.match(emailRegex)?.length > 1 && pass.login.match(emailRegex)[1]
-            if (emailDomain && urlDomain && emailDomain === urlDomain) {
-              flagEmployee = urlDomain
-            } else if (emailDomain !== urlDomain){
-              if(emailDomain){
-                flagThirdParty = emailDomain
-              }
-              if(urlDomain){
-                const match = urlDomain.match(/([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)\/?$/);
-                const domain = match ? match[0] : urlDomain;
-                flagUser = domain
-                const eduRegex = /\.edu(\.\w{2,3})?/
-                const govRegex = /\.gov(\.\w{2,3})?/
-                const eduTld = urlDomain?.match(eduRegex)
-                const govTld = urlDomain?.match(govRegex)
-                let findGov = null
-                let findEdu = null
-                if(eduTld?.length){
-                  findEdu = edu.find(d => d.domain === eduTld[0])
-                  flagEdu = findEdu?.country ?? "-"
+                if(syskey.match(systemInfoRegex.RegExpMalwareName)?.filter(n => n)?.length){
+                  systemInfo.malware_name = sys[syskey]
                 }
-                if(govTld?.length){
-                  findGov = gov.find(d => d.domain === govTld[0])
-                  flagGov = findGov?.country ?? "-"
+                if(syskey.match(systemInfoRegex.RegExpAntivirus)?.filter(n => n)?.length){
+                  systemInfo.antivirus = sys[syskey]
+                }
+                if(syskey.match(systemInfoRegex.RegExpComputerName)?.filter(n => n)?.length){
+                  systemInfo.computer_name = sys[syskey]
+                }
+                if(syskey.match(systemInfoRegex.RegExpIP)?.filter(n => n)?.length){
+                  systemInfo.ip = sys[syskey]
+                }
+                if(systemInfo.location === "-" && syskey.match(systemInfoRegex.RegExpLocation)?.filter(n => n)?.length){
+                  systemInfo.location = sys[syskey]
+                }
+                if(syskey.match(systemInfoRegex.RegExpMachineID)?.filter(n => n)?.length){
+                  systemInfo.machine_id = sys[syskey]
+                }
+                if(syskey.match(systemInfoRegex.RegExpOperationSistem)?.filter(n => n)?.length){
+                  systemInfo.operation_sistem = sys[syskey]
+                }
+                if(syskey.match(systemInfoRegex.RegExpPath)?.filter(n => n)?.length){
+                  systemInfo.path = sys[syskey]
+                }
+                if(syskey.match(systemInfoRegex.RegExpDateCompromised)?.filter(n => n)?.length){
+                  systemInfo.date_time_compromised = new Date(sys[syskey])
                 }
               }
             }
-            const isDevice = pass.url?.match(/android:\/\//)
-            if(isDevice?.length && pass.url){
-              const deviceTld = pass.url?.match(/com\.\w+/)[0]
-              if(deviceTld.length){
-                const arr = deviceTld?.replace(/com\./, "")
-                flagUser = arr+".android"
+            for(const credData of data.password){
+              const pass: IPassData = {
+                flag_employee: "-",
+                flag_thirdparty: "-",
+                flag_user: "-",
+                login: "-",
+                password: "-",
+                url: "-",
+                storage: "-",
+                flag_edu: "-",
+                flag_gov: "-"
               }
+              for(const credKey in credData){
+                if(credKey.match(userPassRegex.RegExpLogin)?.filter(n => n)?.length){
+                  pass.login = credData[credKey]
+                }
+                if(credKey.match(userPassRegex.RegExpPassword)?.filter(n => n)?.length){
+                  pass.password = credData[credKey] 
+                }
+                if(credKey.match(userPassRegex.RegExpUrl)?.filter(n => n)?.length){
+                  pass.url = credData[credKey]
+                }
+                if(credKey.match(userPassRegex.RegExpStorage)?.filter(n => n)?.length){
+                  pass.storage = credData[credKey]
+                }
+              }
+              let flagEmployee = "-"
+              let flagUser = "-"
+              let flagThirdParty = "-"
+              let flagGov = "-"
+              let flagEdu = "-"
+              const emailRegex = /@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+              const urlRegex = /[https?|android]:\/\/(?:www\.)?([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/;
+              const urlDomain = pass.url.match(urlRegex)?.length > 1 && pass.url.match(urlRegex)[1]
+              const emailDomain = pass.login.match(emailRegex)?.length > 1 && pass.login.match(emailRegex)[1]
+              if (emailDomain && urlDomain && emailDomain === urlDomain) {
+                flagEmployee = urlDomain
+              } else if (emailDomain !== urlDomain){
+                if(emailDomain){
+                  flagThirdParty = emailDomain
+                }
+                if(urlDomain){
+                  const match = urlDomain.match(/([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)\/?$/);
+                  const domain = match ? match[0] : urlDomain;
+                  flagUser = domain
+                  const eduRegex = /\.edu(\.\w{2,3})?/
+                  const govRegex = /\.gov(\.\w{2,3})?/
+                  const eduTld = urlDomain?.match(eduRegex)
+                  const govTld = urlDomain?.match(govRegex)
+                  let findGov = null
+                  let findEdu = null
+                  if(eduTld?.length){
+                    findEdu = edu.find(d => d.domain === eduTld[0])
+                    flagEdu = findEdu?.country ?? "-"
+                  }
+                  if(govTld?.length){
+                    findGov = gov.find(d => d.domain === govTld[0])
+                    flagGov = findGov?.country ?? "-"
+                  }
+                }
+              }
+              const isDevice = pass.url?.match(/android:\/\//)
+              if(isDevice?.length && pass.url){
+                const deviceTld = pass.url?.match(/com\.\w+/)
+                if(deviceTld.length){
+                  const arr = deviceTld[0]?.replace(/com\./, "")
+                  flagUser = arr+".android"
+                }
+              }
+              pass.flag_edu = flagEdu ?? "-"
+              pass.flag_gov = flagGov ?? "-"
+              pass.flag_employee = flagEmployee ?? "-"
+              pass.flag_thirdparty = flagThirdParty ?? "-"
+              pass.flag_user = flagUser ?? "-"
+              finalData.push({
+                ...systemInfo, ...pass,
+                id: `sector-one-${crypto.randomUUID()}`,
+                storage: "-",
+                date_time_added: new Date()
+              })
             }
-            pass.flag_edu = flagEdu ?? "-"
-            pass.flag_gov = flagGov ?? "-"
-            pass.flag_employee = flagEmployee ?? "-"
-            pass.flag_thirdparty = flagThirdParty ?? "-"
-            pass.flag_user = flagUser ?? "-"
-            finalData.push({
-              ...systemInfo, ...pass,
-              id: `sector-one-${crypto.randomUUID()}`,
-              storage: "-",
-              date_time_added: new Date()
-            })
           }
+        } catch (e) {
+          console.log('Error format data')
+          return
         }
       })
       if(!fs.existsSync(`${process.cwd()}/result`)){
@@ -204,7 +209,7 @@ class Parser {
       await mongodb.updateDowloadStatusByFileId(file_id, "formatted")
     } catch (e) {
       console.log("Error format data")
-      console.error(e)
+      return
     }
   }
   
