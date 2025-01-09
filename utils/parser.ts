@@ -110,7 +110,7 @@ class Parser {
                 }
               }
             }
-            for(const credData of data.password){
+            data.password.forEach(credData => {
               const pass: IPassData = {
                 flag_employee: "-",
                 flag_thirdparty: "-",
@@ -190,7 +190,7 @@ class Parser {
                 storage: "-",
                 date_time_added: new Date()
               })
-            }
+            })
           }
         } catch (e) {
           console.log('Error format data')
