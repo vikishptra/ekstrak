@@ -5,14 +5,12 @@ import mongodb from "./mongodb";
 import { Worker } from "cluster";
 const passwordList = fs.readFileSync('listPass.txt', {encoding: 'utf-8'}).split(/\n/)
 export const extract = async (file: IFileStatus[]) => {
-  await Promise.all(file.map(async(data) =>{
-    await mongodb.updateDowloadStatusByFileId(data.file_id, "extracting")
-  }))
   if(!fs.existsSync(`${process.cwd()}/_td_files/documents/extracted`)){
     fs.mkdirSync(`${process.cwd()}/_td_files/documents/extracted`);
   }
   if(file.length){
     await Promise.all(file.map(async(data) => {
+      await mongodb.updateDowloadStatusByFileId(data.file_id, "extracting")
       if(data.mimetype === "application/zip"){
         let retry = -1
         let isFailed = true
