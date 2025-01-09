@@ -110,7 +110,7 @@ class Parser {
                 }
               }
             }
-            for(const credData of data.password){
+            data.password.forEach(credData => {
               const pass: IPassData = {
                 flag_employee: "-",
                 flag_thirdparty: "-",
@@ -174,7 +174,7 @@ class Parser {
               const isDevice = pass.url?.match(/android:\/\//)
               if(isDevice?.length && pass.url){
                 const deviceTld = pass.url?.match(/com\.\w+/)
-                if(deviceTld.length){
+                if(deviceTld?.length){
                   const arr = deviceTld[0]?.replace(/com\./, "")
                   flagUser = arr+".android"
                 }
@@ -190,7 +190,7 @@ class Parser {
                 storage: "-",
                 date_time_added: new Date()
               })
-            }
+            })
           }
         } catch (e) {
           console.log('Error format data')
@@ -208,7 +208,7 @@ class Parser {
       fs.writeFileSync(`result/${filename}.json`, JSON.stringify(finalData))
       await mongodb.updateDowloadStatusByFileId(file_id, "formatted")
     } catch (e) {
-      console.log("Error format data")
+      console.log("Error insert")
       return
     }
   }
@@ -293,7 +293,9 @@ class Parser {
         })
       }))
     }))
-    await mongodb.insertDownloadFile(newFile)
+    if(newFile.length){
+      await mongodb.insertDownloadFile(newFile)
+    }
     console.log("All matching files have been copied.");
   }
   public parseSystemTextToJson (text: string): Record<string, any> {
