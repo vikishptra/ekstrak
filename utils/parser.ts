@@ -54,6 +54,8 @@ class Parser {
   public async formatDataWithRegex(parsedData: ParsedJSONData[], filename: string, file_id: string) {
     try {
       let finalData: IFinalData[] = []
+      const eduRegex = /\.edu(\.\w{2,3})?/
+      const govRegex = /\.gov(\.\w{2,3})?/
       parsedData.map(data => {
         try{
           if(data.password.length){
@@ -155,8 +157,6 @@ class Parser {
                   const match = urlDomain.match(/([a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)\/?$/);
                   const domain = match ? match[0] : urlDomain;
                   flagUser = domain
-                  const eduRegex = /\.edu(\.\w{2,3})?/
-                  const govRegex = /\.gov(\.\w{2,3})?/
                   const eduTld = urlDomain?.match(eduRegex)
                   const govTld = urlDomain?.match(govRegex)
                   let findGov = null
@@ -205,6 +205,36 @@ class Parser {
           return d
         }
       }).filter(d => d)
+      finalData = finalData.map((d) => {
+        const eduRegex = /\.edu(\.\w{2,3})?/
+        const govRegex = /\.gov(\.\w{2,3})?/
+        const eduTld = d.flag_user?.match(eduRegex)
+        const govTld = d.flag_user?.match(govRegex)
+        let flagEdu = null
+        let flagGov = null
+        let newFlagUser = null
+        if(eduTld?.length && d.flag_edu === "-"){
+          const findEdu = edu.find(d => d.domain === eduTld[0])
+          flagEdu = findEdu?.country ?? "-"
+        }
+        if(govTld?.length && d.flag_gov === "-"){
+          const findGov = gov.find(d => d.domain === govTld[0])
+          flagGov = findGov?.country ?? "-"
+        }
+        if(!eduTld?.length && !govTld?.length){
+          const splitDomain = d.flag_user.split(".")
+          if(splitDomain.length >= 3){
+            splitDomain.shift()
+            newFlagUser = splitDomain.join(".")
+          }
+        }
+        return {
+          ...d,
+          ...(flagGov ? {flag_gov: flagGov}: {}),
+          ...(flagEdu ? {flag_edu: flagEdu}: {}),
+          ...(newFlagUser ? {flag_user: newFlagUser}: {})
+        }
+      })
       fs.writeFileSync(`result/${filename}.json`, JSON.stringify(finalData))
       await mongodb.updateDowloadStatusByFileId(file_id, "formatted")
     } catch (e) {
@@ -294,7 +324,11 @@ class Parser {
       }))
     }))
     if(newFile.length){
-      await mongodb.insertDownloadFile(newFile)
+      try{
+        await mongodb.insertDownloadFile(newFile)
+      } catch {
+        console.log("Error Insert New File")
+      }
     }
     console.log("All matching files have been copied.");
   }
